@@ -11,5 +11,13 @@ namespace ExplosionAPI.Controllers
     [ApiController]
     public class HelloWorldController : ControllerBase
     {
+        [HttpGet]
+
+        public string SayHello()
+        {
+            return "Hello, World.";
+        }
+
+
     }
 }
