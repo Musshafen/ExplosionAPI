@@ -13,17 +13,19 @@ namespace ExplosionAPI.Controllers
 
     {
         [HttpGet]
-        public static string Solution(string str)
+        public static string Solution(string s)
         {
-            var flippedStr = "";
-
-            for (var i = str.Length - 1; i >= 0; i--)
+            var expStr = "";
+            for (var i = 0; i < s.Length; i++)
             {
-
-                flippedStr += str[i];
-
+                var numChar = s[i].ToString();
+                var num = Int32.Parse(numChar);
+                for (var j = 0; j < num; j++)
+                {
+                    expStr += numChar;
+                }
             }
-            return flippedStr;
+            return expStr;
 
         }
 
