@@ -11,7 +11,21 @@ namespace ExplosionAPI.Controllers
     [ApiController]
     public class ExplosionController : ControllerBase
     {
-        publi
-        
+        [HttpGet]
+        public string Explode(string str)
+        {
+            str = str.Replace("0", "");
+            str = str.Replace("2", "22");
+            str = str.Replace("3", "333");
+            str = str.Replace("4", "4444");
+            str = str.Replace("5", "55555");
+            str = str.Replace("6", "666666");
+            str = str.Replace("7", "7777777");
+            str = str.Replace("8", "88888888");
+            str = str.Replace("9", "999999999");
+
+            return $"Here is the new number: {str}";
+        }
+
     }
 }
