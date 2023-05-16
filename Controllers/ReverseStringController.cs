@@ -13,23 +13,14 @@ namespace ExplosionAPI.Controllers
 
     {
         [HttpGet]
-        public static string Solution(string s)
+        public string Solution(string str)
         {
-            var expStr = "";
-            for (var i = 0; i < s.Length; i++)
-            {
-                var numChar = s[i].ToString();
-                var num = Int32.Parse(numChar);
-                for (var j = 0; j < num; j++)
-                {
-                    expStr += numChar;
-                }
-            }
-            return expStr;
+            char[] charArray = str.ToCharArray();
 
+            Array.Reverse(charArray);
+
+            var newString = new string(charArray);
+            return $"Here is your string reversed: {newString}";
         }
-
-
-
     }
 }

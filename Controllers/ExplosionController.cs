@@ -11,5 +11,7 @@ namespace ExplosionAPI.Controllers
     [ApiController]
     public class ExplosionController : ControllerBase
     {
+        publi
+        
     }
 }
